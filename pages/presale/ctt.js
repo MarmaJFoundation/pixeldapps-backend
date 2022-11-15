@@ -128,7 +128,7 @@ export default function CTT() {
               <div className="relative px-4 pt-8 pb-8 sm:px-6 lg:px-6">
                 <p className="mt-2 max-w-lg mx-auto text-center text-lg text-gray-200 sm:max-w-3xl">
                   <a
-                    href="https://pixeldapps-backend.vercel.app/chainteam"
+                    href="https://pd.marmaj.org/chainteam"
                     className="px-8 py-2 mx-auto text-base font-medium text-white bg-gray-700 border border-transparent rounded-md shadow w-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                   >
                     Play Chain Team Tactics Beta
