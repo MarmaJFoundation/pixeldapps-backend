@@ -15,7 +15,7 @@ export default async (
         return;
     }
     try {
-        const response = await changeFunctionWithAttachment(rq.account_id, rq.privatekey, APP_CONTRACT, "refill_fight_balance", {}, new BN('250000000000000000000000'), "https://ecosystem.pixeldapps.co/callback?page=refill", new BN('40000000000000'));
+        const response = await changeFunctionWithAttachment(rq.account_id, rq.privatekey, APP_CONTRACT, "refill_fight_balance", {}, new BN('250000000000000000000000'), "https://pd.marmaj.org/callback?page=refill", new BN('40000000000000'));
         if (!checkFunctionResponse(response)) {
             return res.status(200).json({ success: false, error: response.error.type });
         }

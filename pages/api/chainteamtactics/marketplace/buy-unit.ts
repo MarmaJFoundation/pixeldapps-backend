@@ -33,7 +33,7 @@ export default async (
             "ctt_buy_unit",
             { token_id: rq.unitdata.token_id, owner: unit_token.owner, buyer: rq.account_id, price: entry.price },
             new BN('1'),
-            "https://ecosystem.pixeldapps.co/callback?page=unit_bought",
+            "https://pd.marmaj.org/callback?page=unit_bought",
             new BN('150000000000000')// 150???
         );
 

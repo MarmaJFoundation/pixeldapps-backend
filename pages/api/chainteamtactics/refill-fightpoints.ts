@@ -25,7 +25,7 @@ export default async (
             "ctt_refill_fight_balance",
             {},
             new BN('200000000000000000000000'),
-            "https://ecosystem.pixeldapps.co/callback?page=refill_ctt",
+            "https://pd.marmaj.org/callback?page=refill_ctt",
             new BN('40000000000000')// 40
         );
 

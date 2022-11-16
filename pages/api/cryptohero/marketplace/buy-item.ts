@@ -33,7 +33,7 @@ export default async (
             "ch_buy_item",
             { token_id: rq.itemdata.token_id, owner: item_token.owner, buyer: rq.account_id, price: entry.price },
             new BN('1'),
-            "https://ecosystem.pixeldapps.co/callback?page=item_bought",
+            "https://pd.marmaj.org/callback?page=item_bought",
             new BN('150000000000000')// 150???
         );
 

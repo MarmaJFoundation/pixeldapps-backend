@@ -20,7 +20,7 @@ export default async (
         if (pet_info && pet_info.pet_data.owner == rq.account_id) {
             throw 'You can\'t buy your own pet'
         }
-        const response = await changeFunctionWithAttachment(rq.account_id, rq.privatekey, APP_CONTRACT, "marketplace_buy", { token_id: rq.token_id, owner: pet_info.pet_data.owner, buyer: rq.account_id, price: pet_info.price }, new BN('1'), "https://ecosystem.pixeldapps.co/callback?page=pet_bought", new BN('150000000000000'));
+        const response = await changeFunctionWithAttachment(rq.account_id, rq.privatekey, APP_CONTRACT, "marketplace_buy", { token_id: rq.token_id, owner: pet_info.pet_data.owner, buyer: rq.account_id, price: pet_info.price }, new BN('1'), "https://pd.marmaj.org/callback?page=pet_bought", new BN('150000000000000'));
         if (!checkFunctionResponse(response)) {
             return res.status(200).json({ success: false, error: response.error.type });
         }
