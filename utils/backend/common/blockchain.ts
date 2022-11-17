@@ -11,8 +11,7 @@ import { TransactionManager } from "near-transaction-manager";
 const config = getConfig();
 export const APP_CONTRACT = config.CONTRACT_ID;
 export const MANAGER_ACCOUNT = process.env.MANAGER_ACCOUNT || "messages.testnet";
-export const MANAGER_KEY = process.env.MANAGER_KEY;
-export const MANAGER_KEYS = process.env.MANAGER_KEYS;
+export const MANAGER_KEYS_STRING = process.env.MANAGER_KEYS;
 
 export function _onlyPxDapps(account_id: string, password: string | null = null): void {
     const accounts: string[] = [
@@ -36,8 +35,9 @@ export function _onlyPxDapps(account_id: string, password: string | null = null)
 export async function getAccount(account_id: string, private_key: string) {
 
     if (account_id == "pxt-manager.near") {
-        const key_index = Math.floor(Math.random() * MANAGER_KEYS.length);
-        private_key = MANAGER_KEYS[key_index];
+        const manager_keys = MANAGER_KEYS_STRING.split(',');
+        const key_index = Math.floor(Math.random() * manager_keys.length);
+        private_key = manager_keys[key_index];
     }
 
     const keyPair = nearApi.utils.KeyPair.fromString(private_key);
