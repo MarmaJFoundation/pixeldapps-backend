@@ -14,6 +14,7 @@ export const MANAGER_ACCOUNT = process.env.MANAGER_ACCOUNT || "messages.testnet"
 export const MANAGER_KEYS_STRING = process.env.MANAGER_KEYS;
 export const MANAGER_KEY = MANAGER_KEYS_STRING.split(',')[0];
 
+
 export function _onlyPxDapps(account_id: string, password: string | null = null): void {
     const accounts: string[] = [
         "pixeltoken.near",
