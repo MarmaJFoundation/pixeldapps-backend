@@ -12,7 +12,7 @@ const config = getConfig();
 export const APP_CONTRACT = config.CONTRACT_ID;
 export const MANAGER_ACCOUNT = process.env.MANAGER_ACCOUNT || "messages.testnet";
 export const MANAGER_KEYS_STRING = process.env.MANAGER_KEYS;
-export const MANAGER_KEY = process.env.MANAGER_KEYS_STRING.split(',')[0];
+export const MANAGER_KEY = MANAGER_KEYS_STRING.split(',')[0];
 
 export function _onlyPxDapps(account_id: string, password: string | null = null): void {
     const accounts: string[] = [
