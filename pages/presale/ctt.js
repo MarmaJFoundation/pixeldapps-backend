@@ -209,11 +209,7 @@ export default function CTT() {
             <div className="grid grid-cols-1 md:space-x-2 space-y-4 md:space-y-0">
 
               <center><img src="ctt/ctt_rarity_table.png"></img></center>
-              <br /><br />
-              <video width="960" controls>
-                <source src="https://ams3.digitaloceanspaces.com/pxspace/ctt/ctt_battle.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <br />
               <br></br>
 
             </div>
