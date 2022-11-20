@@ -74,6 +74,7 @@ export default async (
     }
 }
 
+
 function get_func_body(): string {
     const func = `function (idata) {
             let damage = 0;
