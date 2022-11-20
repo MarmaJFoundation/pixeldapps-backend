@@ -38,19 +38,13 @@ export default async (
         }
 
         rq.itemdata.minStat = clamp(rq.itemdata.minStat, 0, Infinity);
-        filter["stat_rank"] = { $gte: rq.itemdata.minStat };
+        //filter["stat_rank"] = { $gte: rq.itemdata.minStat };
 
         const entries = await db.collection("marketplace").aggregate([
             {
                 $project: {
                     item_data: 1,
-                    stat_rank: {
-                        $function: {
-                            body: get_func_body(),
-                            args: ["$item_data"],
-                            lang: "js"
-                        }
-                    }
+                    stat_rank: 100
                 }
             },
             {
