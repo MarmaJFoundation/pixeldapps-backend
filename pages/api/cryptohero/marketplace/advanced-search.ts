@@ -67,7 +67,6 @@ export default async (
         ])
         .toArray();
 
-        
         entries.forEach(x => {
             x._id = undefined;
             x.stat_rank = undefined;
