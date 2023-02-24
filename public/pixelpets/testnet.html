@@ -10,9 +10,15 @@
 </head>
 
 <body>
-  <!-- <div id="unity-mobile-warning">
-    Pixelpets is not supported on mobile devices yet.
-  </div> -->
+ <div id="unity-container" class="unity-mobile">
+    <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
+    <!-- width="1224" height="765"-->
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+   </div>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
     <!-- width="1224" height="765"-->
