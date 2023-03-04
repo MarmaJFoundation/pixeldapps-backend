@@ -68,10 +68,10 @@
       // and default/override low DPI mode on mobile browsers.
       config.devicePixelRatio = 1;
       container.style.display = "none";
-      mobileWarning.style.display = "block";
-      abort = true;
+      // mobileWarning.style.display = "block";
+      abort = false;
       setTimeout(() => {
-        //mobileWarning.style.display = "none";
+        // mobileWarning.style.display = "none";
       }, 5000);
 
     } else {
