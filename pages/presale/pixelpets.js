@@ -116,7 +116,7 @@ export default function Eggs() {
             <br />  <br />
 
             <a
-              href="https://pd.marmaj.org/pixelpets"
+              href="https://pd-testnet.marmaj.org/pixelpets/testnet.html"
               className="px-8 py-2 mx-auto mt-10 text-base font-medium text-white bg-gray-700 border border-transparent rounded-md shadow w-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
             >
               Play Pixelpets!
