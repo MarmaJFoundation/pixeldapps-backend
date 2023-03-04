@@ -31,7 +31,7 @@ export default function CH_Presale() {
             </h1>
             <p className="mt-6 max-w-lg mx-auto text-center text-lg text-gray-200 sm:max-w-3xl">
               <a
-                href="https://pd.marmaj.org/cryptoheroes"
+                href="https://pd-testnet.marmaj.org/cryptoheroes/testnet.html"
                 className="px-8 py-2 mx-auto mt-10 text-base font-medium text-white bg-gray-700 border border-transparent rounded-md shadow w-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
               >
                 Play Cryptoheroes!
