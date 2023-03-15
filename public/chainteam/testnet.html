@@ -4,11 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>Chain Team Tactics Dapp</title>
   <link rel="shortcut icon" href="chainteam/TemplateData/favicon.ico">
   <link rel="stylesheet" href="chainteam/TemplateData/style.css">
 </head>
 <body>
+  <div id="unity-mobile" class="unity-mobile">
+  <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
+    <!-- width="1224" height="765"-->
+    <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+  
+      <div id="unity-footer">
+  
+        <div id="unity-fullscreen-button"></div>
+  
+      </div>
+</div>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
     <!-- width="1224" height="765"-->
@@ -50,24 +67,24 @@
     // Set this to false if you want to decouple this synchronization from
     // happening inside the engine, and you would instead like to size up
     // the canvas DOM size and WebGL render target sizes yourself.
-    config.matchWebGLToCanvasSize = false;
+    // config.matchWebGLToCanvasSize = false;
 
-    // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-    // container.className = "unity-mobile";
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      container.className = "unity-mobile";
       // Avoid draining fillrate performance on mobile devices,
       // and default/override low DPI mode on mobile browsers.
-    //  config.devicePixelRatio = 1;
-    //  container.style.display = "none";
-      // mobileWarning.style.display = "block";
-    //  abort = false;
-    //  setTimeout(() => {
+      config.devicePixelRatio = 1;
+      container.style.display = "none";
+      //mobileWarning.style.display = "block";
+      abort = false;
+      setTimeout(() => {
         //mobileWarning.style.display = "none";
-    //  }, 5000);
+      }, 5000);
 
-    //} else {
+    } else {
       //canvas.style.width = "1224px";
       //canvas.style.height = "765px";
-    //}
+    }
     loadingBar.style.display = "block";
 
     var script = document.createElement("script");
