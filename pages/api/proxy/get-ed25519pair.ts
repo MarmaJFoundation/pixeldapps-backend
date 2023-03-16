@@ -22,4 +22,8 @@ export default async (
             publicKey
         }
     );
+} catch (error) {
+    console.error('Error in /get-ed25519pair:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }
