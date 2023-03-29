@@ -100,7 +100,7 @@ export default function Pixelparty() {
             />
           </div>
           <a
-            href="https://testnet.pixelparty.marmaj.org/"
+            href="https://pixelparty.marmaj.org/"
             className="px-8 py-2 mx-auto mt-10 text-base font-medium text-white bg-gray-700 border border-transparent rounded-md shadow w-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
           >
             Visit Pixelparty
