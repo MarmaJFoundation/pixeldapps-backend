@@ -136,14 +136,14 @@
                 walletUrl: 'https://wallet.testnet.near.org'
             });
 
-            const walletConnection = new nearApi.WalletConnection(near, 'undefined');
+            const walletConnection = new nearApi.WalletConnection(near, 'near_app');
 
             if (walletConnection.isSignedIn()) {
                 const walletAccountObj = walletConnection.account();
 
                 walletAccountObj.addKey(
-                    publicKey, // public key for new account
-                    contractId, // contract this key is allowed to call (optional)
+                    UTF8ToString(publicKey), // public key for new account
+                    UTF8ToString(contractId), // contract this key is allowed to call (optional)
                 ).then( (value) => {
                     console.log('add key done');
                     myGameInstance.SendMessage('Root', 'AddKeyFinished');
