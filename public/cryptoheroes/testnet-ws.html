@@ -172,22 +172,26 @@
                     h = window.innerHeight;
                     var r = originHeight / originWidth;
 
+                    /*
                     if (container.getAttribute("isportrait").toLowerCase() == "true") {
                         r = originWidth / originHeight;
                     }
+                    */
 
                     if (w * r > window.innerHeight) {
                         w = Math.min(w, Math.ceil(h / r));
                     }
                     h = Math.floor(w * r);
                 } else {
+                    /*
                     if (container.getAttribute("isportrait").toLowerCase() == "true") {
                         w = originHeight;
                         h = originWidth;
                     } else {
+                    */
                         w = originWidth;
                         h = originHeight;
-                    }
+                    //}
                 }
 
                 //console.log(originWidth + ' x ' + originHeight);
