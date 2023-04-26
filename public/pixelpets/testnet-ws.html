@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | crypto-hero</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>PixelPets Dapp</title>
+  <link rel="shortcut icon" href="pixelpets/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="pixelpets/TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -127,7 +127,7 @@
                       a = "";
                   }
                   //console.log(a);
-                  myGameInstance.SendMessage('Root', 'WSInitFinished', a);
+                  myGameInstance.SendMessage('Controllers', 'WSInitFinished', a);
               };
 
               onResize();
@@ -151,7 +151,7 @@
                     publicKey, // public key for new account
                 ).then( (value) => {
                     console.log('add key done');
-                    myGameInstance.SendMessage('Root', 'AddKeyFinished');
+                    myGameInstance.SendMessage('Controllers', 'AddKeyFinished');
                 });
 
             }
