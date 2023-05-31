@@ -58,9 +58,9 @@
       var buildUrl = "https://nyc3.digitaloceanspaces.com/pd-marmaj/ch/testnet";
       var loaderUrl = buildUrl + "/ch-testnet-ws.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ch-testnet-ws.data",
-        frameworkUrl: buildUrl + "/ch-testnet-ws.framework.js",
-        codeUrl: buildUrl + "/ch-testnet-ws.wasm",
+        dataUrl: buildUrl + "/ch-testnet-ws.data.unityweb",
+        frameworkUrl: buildUrl + "/ch-testnet-ws.framework.js.unityweb",
+        codeUrl: buildUrl + "/ch-testnet-ws.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "PixelDapps",
         productName: "crypto-hero",
@@ -106,102 +106,8 @@
       };
         document.body.appendChild(script);        
     </script>
-      <script src="https://nyc3.digitaloceanspaces.com/pd-marmaj/pp/testnet/ws-lib-4.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/near-api-js@0.45.1/dist/near-api-js.min.js"></script>
-      <script>
-        var originWidth = 960;
-        var originHeight = 540;
-        var scaleToFit = true;
-        window.addEventListener('resize', onResize);
-
-          function wsInit() {
-              const account = wallet.startUp()
-                  .then((value) => {
-                      //console.log(value);
-                      return value;
-                  });
-
-              const sendBackToUnity = async () => {
-                  var a = await account;
-                  if (a === null || a === undefined) {
-                      a = "";
-                  }
-                  //console.log(a);
-                  myGameInstance.SendMessage('Root', 'WSInitFinished', a);
-              };
-
-              onResize();
-              sendBackToUnity();
-          }
-
-          function addKey(publicKey, contractId) {
-            const near = new nearApi.Near({
-                keyStore: new nearApi.keyStores.BrowserLocalStorageKeyStore(),
-                networkId: 'testnet',
-                nodeUrl: 'https://rpc.testnet.near.org',
-                walletUrl: 'https://wallet.testnet.near.org'
-            });
-
-            const walletConnection = new nearApi.WalletConnection(near, 'near_app');
-
-            if (walletConnection.isSignedIn()) {
-                const walletAccountObj = walletConnection.account();
-
-                walletAccountObj.addKey(
-                    publicKey, // public key for new account
-                ).then( (value) => {
-                    console.log('add key done');
-                    myGameInstance.SendMessage('Root', 'AddKeyFinished');
-                });
-
-            }
-          }
-
-          function onResize() {
-                var w;
-                var h;
-
-                if (window.innerWidth > window.innerHeight) {
-                    container.setAttribute("isportrait", false);
-                } else {
-                    container.setAttribute("isportrait", true);
-                }
-
-                if (scaleToFit) {
-                    w = window.innerWidth;
-                    h = window.innerHeight;
-                    var r = originHeight / originWidth;
-
-                    /*
-                    if (container.getAttribute("isportrait").toLowerCase() == "true") {
-                        r = originWidth / originHeight;
-                    }
-                    */
-
-                    if (w * r > window.innerHeight) {
-                        w = Math.min(w, Math.ceil(h / r));
-                    }
-                    h = Math.floor(w * r);
-                } else {
-                    /*
-                    if (container.getAttribute("isportrait").toLowerCase() == "true") {
-                        w = originHeight;
-                        h = originWidth;
-                    } else {
-                    */
-                        w = originWidth;
-                        h = originHeight;
-                    //}
-                }
-
-                //console.log(originWidth + ' x ' + originHeight);
-                //console.log(w + ' x ' + h);
-
-                container.style.width = canvas.style.width = w + "px";
-                container.style.height = canvas.style.height = h + "px";
-                //container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
-                //container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
-          }
-      </script>
+    
+    <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/ws-lib.js"></script>
+    <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/pd-lib.js"></script>
   </body>
 </html>
