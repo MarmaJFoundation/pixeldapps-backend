@@ -55,12 +55,12 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "https://nyc3.digitaloceanspaces.com/pd-marmaj/ctt/testnet";
+      var buildUrl = "https://pd-marmaj.nyc3.digitaloceanspaces.com/ctt/testnet";
       var loaderUrl = buildUrl + "/ctt-testnet-ws.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ctt-testnet-ws.data",
-        frameworkUrl: buildUrl + "/ctt-testnet-ws.framework.js",
-        codeUrl: buildUrl + "/ctt-testnet-ws.wasm",
+        dataUrl: buildUrl + "/ctt-testnet-ws.data.unityweb",
+        frameworkUrl: buildUrl + "/ctt-testnet-ws.framework.js.unityweb",
+        codeUrl: buildUrl + "/ctt-testnet-ws.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "PixelDapps",
         productName: "chain-team-tactics",
@@ -106,85 +106,7 @@
       document.body.appendChild(script);
     </script>
     
-    <script src="https://nyc3.digitaloceanspaces.com/pd-marmaj/ch/testnet/ws-lib.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/near-api-js@0.45.1/dist/near-api-js.min.js"></script>
-
-    <script>
-    var originWidth = 960;
-        var originHeight = 540;
-        var scaleToFit = true;
-        window.addEventListener('resize', onResize);
-
-          function wsInit() {
-              const account = wallet.startUp()
-                  .then((value) => {
-                      //console.log(value);
-                      return value;
-                  });
-
-              const sendBackToUnity = async () => {
-                  var a = await account;
-                  if (a === null || a === undefined) {
-                      a = "";
-                  }
-                  //console.log(a);
-                  myGameInstance.SendMessage('OnlineControllers', 'WSInitFinished', a);
-              };
-
-              onResize();
-              sendBackToUnity();
-          }
-
-          function addKey(publicKey, contractId) {
-            const near = new nearApi.Near({
-                keyStore: new nearApi.keyStores.BrowserLocalStorageKeyStore(),
-                networkId: 'testnet',
-                nodeUrl: 'https://rpc.testnet.near.org',
-                walletUrl: 'https://wallet.testnet.near.org'
-            });
-
-            const walletConnection = new nearApi.WalletConnection(near, 'near_app');
-
-            if (walletConnection.isSignedIn()) {
-                const walletAccountObj = walletConnection.account();
-
-                walletAccountObj.addKey(
-                    publicKey, // public key for new account
-                ).then( (value) => {
-                    console.log('add key done');
-                    myGameInstance.SendMessage('OnlineControllers', 'AddKeyFinished');
-                });
-
-            }
-          }
-
-          function onResize() {
-                var w;
-                var h;
-
-                if (window.innerWidth > window.innerHeight) {
-                    container.setAttribute("isportrait", false);
-                } else {
-                    container.setAttribute("isportrait", true);
-                }
-
-                if (scaleToFit) {
-                    w = window.innerWidth;
-                    h = window.innerHeight;
-                    var r = originHeight / originWidth;
-
-                    if (w * r > window.innerHeight) {
-                        w = Math.min(w, Math.ceil(h / r));
-                    }
-                    h = Math.floor(w * r);
-                } else {
-                        w = originWidth;
-                        h = originHeight;
-                }
-
-                container.style.width = canvas.style.width = w + "px";
-                container.style.height = canvas.style.height = h + "px";
-          }
-    </script>
+    <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/ws-lib.js"></script>
+    <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/pd-lib.js"></script>
   </body>
 </html>
