@@ -23,6 +23,7 @@
         <div id="unity-build-title">PixelPets</div>
       </div>
     </div>
+
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -104,10 +105,21 @@
           alert(message);
         });
       };
-        document.body.appendChild(script);        
+        document.body.appendChild(script);
+        
+        function FixInputOnSubmit() {
+			document.getElementById("fixInput").blur();
+			event.preventDefault();
+		}
     </script>
     
     <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/ws-lib.js"></script>
     <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/testnet/pd-lib.js"></script>
+
+    <div>
+		<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
+			<input type="text" id="fixInput" oninput="gameInstance.Module.ccall('FixInputUpdate', null)" onblur="gameInstance.Module.ccall('FixInputOnBlur', null)" style="font-size: 42px;">
+		</form>
+	</div>
   </body>
 </html>
