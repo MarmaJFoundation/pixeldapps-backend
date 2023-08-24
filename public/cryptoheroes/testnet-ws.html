@@ -119,7 +119,7 @@
 
     <div>
 		<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
-			<input type="text" id="fixInput" oninput="myGameInstance.Module.ccall('FixInputUpdate', null)" onblur="myGameInstance.Module.ccall('FixInputOnBlur', null)" style="font-size: 42px;">
+			<input type="text" id="fixInput" oninput="myGameInstance.SendMessage('_WebGLKeyboard', 'FixInputUpdate', null)" onblur="myGameInstance.SendMessage('_WebGLKeyboard', 'FixInputOnBlur', null)" style="font-size: 42px;">
 		</form>
 	</div>
   </body>
