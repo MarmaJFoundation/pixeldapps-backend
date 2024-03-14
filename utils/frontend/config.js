@@ -5,7 +5,7 @@ export default function getConfig() {
             return {
                 networkId: 'mainnet',
                 nodeUrl: 'https://rpc.mainnet.near.org',
-                walletUrl: 'https://www.mynearwallet.com/',
+                walletUrl: 'https://mynearwallet.com',
                 helperUrl: 'https://helper.mainnet.near.org',
                 explorerUrl: 'https://explorer.mainnet.near.org',
                 CONTRACT_ID: `pixeltoken.near`

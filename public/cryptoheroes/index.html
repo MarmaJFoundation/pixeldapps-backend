@@ -60,7 +60,7 @@
         frameworkUrl: buildUrl + "/ch-mainnet-ws.framework.js.unityweb",
         codeUrl: buildUrl + "/ch-mainnet-ws.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "PixelDapps",
+        companyName: "PixelDapps",  
         productName: "Cryptoheroes",
         productVersion: "2.7",
         showBanner: unityShowBanner,
@@ -107,18 +107,5 @@
     
     <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/mainnet/ws-lib.js"></script>
     <script src="https://pd-marmaj.nyc3.digitaloceanspaces.com/library/mainnet/pd-lib.js"></script>
-
-    <script>
-        function FixInputOnSubmit() {
-			document.getElementById("fixInput").blur();
-			event.preventDefault();
-		}
-    </script>
-
-    <div>
-		<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
-			<input type="text" id="fixInput" oninput="myGameInstance.SendMessage('_WebGLKeyboard', 'ReceiveInputChange', document.getElementById('fixInput').value)" onblur="myGameInstance.SendMessage('_WebGLKeyboard', 'LoseFocus')" style="font-size: 42px;">
-		</form>
-	</div>
   </body>
 </html>
