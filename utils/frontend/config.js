@@ -1,6 +1,7 @@
 export default function getConfig() {
     const env = process.env.NEXT_PUBLIC_NEAR_NETWORK_ID || "testnet";
     switch (env) {
+        //mains
         case 'mainnet':
             return {
                 networkId: 'mainnet',
