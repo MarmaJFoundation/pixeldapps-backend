@@ -80,7 +80,7 @@ export default function Home() {
         <>
 
           <div style={{ color: "red", textAlign: "center", margin: "auto" }}> An error occured: {ErrorCode} :(
-            <br />Please contact support on Discord and provide transaction details.
+            <br />Please contact support on Telegram and provide transaction details.
           </div>
         </>
       )}

@@ -108,7 +108,7 @@ export default function CTT() {
               <br /><br /> After the beta ends, rewards will be distributed to the top 50 players on the leaderboard. There will be no rewards during the beta,
               therefor we will distribute some NFTs to top 10 leaderboard when beta ends: 5x CTT Unit-Token, 3x NEAR Meerkats, 2x Misfits, 1x Tiger Academy.
 
-              <br /><br /> If you want to know more, look at the FAQ-Section at the bottom and also join our Discord!
+              <br /><br /> If you want to know more, look at the FAQ-Section at the bottom and also join our Telegram!
             </p>
           </div>
         </div>
@@ -265,7 +265,7 @@ const faqs = [
   {
     question: "How to get whitelisted?",
     answer:
-      "Pixelparty frame holder can ask for a wl spot on CTT channel on Discord.",
+      "Pixelparty frame holder can ask for a wl spot on CTT channel on Telegram.",
   },
   {
     question: "How many units are needed to play?",

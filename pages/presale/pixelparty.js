@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "More questions?",
-    answer: "Join Discord and ask!",
+    answer: "Join our Telegram and ask!",
   },
 
   // More questions...
