@@ -25,7 +25,7 @@ export default async (
     }
     catch (err) {
         await logPixelPetsErrorDb(err, rq.account_id, "get-prev-week-top30");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }
 

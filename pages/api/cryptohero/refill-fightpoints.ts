@@ -37,6 +37,6 @@ export default async (
     }
     catch (err) {
         await logCryptoHeroErrorDb(err, rq.account_id, "refill-fightpoints");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }
