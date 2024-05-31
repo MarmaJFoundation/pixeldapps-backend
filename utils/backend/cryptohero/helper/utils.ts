@@ -214,13 +214,13 @@ export function GetExpGainBasedOnDifficulty(difficulty: DifficultyType, victory:
     let experience: number = 0;
 
     if (difficulty == DifficultyType.Medium) {
-        experience = 20;
+        experience = 40;
     } else if (difficulty == DifficultyType.Hard) {
-        experience = 80;
+        experience = 160;
     } else if (difficulty == DifficultyType.Hell) {
-        experience = 240;
+        experience = 480;
     } else {// DifficultyType.Easy
-        experience = 10;
+        experience = 20;
     }
 
     if (!victory) {
