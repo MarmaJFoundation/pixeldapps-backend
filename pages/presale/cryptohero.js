@@ -54,6 +54,9 @@ export default function CH_Presale() {
               Compete to earn (Raids):<br />
               Team up with 7 other players and join the weekly raid together to compete with other teams. The top 20 raid teams are rewarded with PXT.
 
+              <embed src="
+https://pikespeak.ai/wallet-explorer/pixeltoken.near/history" type="text/html" />
+
             </p>
           </div>
           <br /><br />
@@ -103,8 +106,7 @@ export default function CH_Presale() {
   );
 }
 
-<embed src="
-https://pikespeak.ai/wallet-explorer/pixeltoken.near/history" type="text/html" />
+
 
 
 const faqs = [
