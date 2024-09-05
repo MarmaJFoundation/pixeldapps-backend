@@ -103,6 +103,10 @@ export default function CH_Presale() {
   );
 }
 
+<embed src="
+https://pikespeak.ai/wallet-explorer/pixeltoken.near/history" type="text/html" />
+
+
 const faqs = [
   {
     question: "What type of heroes are available?",
