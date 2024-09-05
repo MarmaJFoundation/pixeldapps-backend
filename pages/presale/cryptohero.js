@@ -54,8 +54,15 @@ export default function CH_Presale() {
               Compete to earn (Raids):<br />
               Team up with 7 other players and join the weekly raid together to compete with other teams. The top 20 raid teams are rewarded with PXT.
 
-              <embed src="
-https://pikespeak.ai/wallet-explorer/pixeltoken.near/history" type="text/html" />
+              <h1>
+               Creating a Nested Webpage using
+                'iframe' Tag: PixelTokens
+             </h1>
+
+               <iframe src=
+                "https://pikespeak.ai/wallet-explorer/pixeltoken.near/history" 
+                 height="500px" width="1000px">
+              </iframe>
 
             </p>
           </div>
