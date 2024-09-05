@@ -219,7 +219,7 @@ export function GetExpGainBasedOnDifficulty(difficulty: DifficultyType, victory:
         experience = 160;
     } else if (difficulty == DifficultyType.Hell) {
         experience = 480;
-    } else {// DifficultyType.Easy
+    } else { DifficultyType.Easy
         experience = 20;
     }
 
