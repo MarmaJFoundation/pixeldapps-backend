@@ -17,6 +17,7 @@
     "@heroicons/react": "^1.0.1",
     "@near-wallet-selector/core": "^8.9.5",
     "@near-wallet-selector/meteor-wallet": "^8.9.5",
+    "@near-wallet-selector/near-mobile-wallet": "^8.9.13",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "axios": "^0.21.1",
     "b58": "^4.0.3",
