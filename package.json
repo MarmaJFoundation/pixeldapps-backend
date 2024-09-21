@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^1.0.1",
-    "@near-wallet-selector/core": "^8.9.5",
+    "@near-wallet-selector/core": "^8.9.13",
     "@near-wallet-selector/meteor-wallet": "^8.9.13",
     "@near-wallet-selector/my-near-wallet": "^8.9.13",
     "@near-wallet-selector/near-mobile-wallet": "^8.9.13",
