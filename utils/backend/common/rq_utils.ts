@@ -17,7 +17,7 @@ export function setup_headers(req: NextApiRequest, res: NextApiResponse): void {
 export async function is_account_banned(account_id: string, res: NextApiResponse<any>): Promise<boolean> {
     const account_ids: string[] = await getCachedBannedAccounts();
     if (account_ids.includes(account_id)) {
-        res.status(200).json({ success: false, error: "Account temporarily banned, contact discord support" });
+        res.status(200).json({ success: false, error: "Account temporarily banned, contact our Telegram support" });
         return true;
     }
     return false;

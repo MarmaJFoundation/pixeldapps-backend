@@ -40,6 +40,6 @@ export default async (
         //const em = (err.kind.ExecutionError as string);
         //log em to mongodb
         await logPixelPetsErrorDb(err, rq.account_id, "open_egg");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }

@@ -27,7 +27,7 @@ export default async (
     }
     catch (err) {
         await logPixelPetsErrorDb(err, rq.account_id, "get_available_pets");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }
 

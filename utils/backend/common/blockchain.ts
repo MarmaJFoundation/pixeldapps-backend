@@ -49,7 +49,8 @@ export async function getAccount(account_id: string, private_key: string) {
         networkId: "default",
         deps: { keyStore },
         masterAccount: account_id,
-        nodeUrl: config.nodeUrl
+        nodeUrl: config.nodeUrl,
+        headers: {}
     });
 
     return await near.account(account_id);
@@ -59,7 +60,7 @@ export function signMessage(input: string, private_key: string) {
     const keyPair = nearApi.utils.KeyPair.fromString(private_key);
     return keyPair.sign(new TextEncoder().encode(input));
 }
-
+//anonymous account
 export async function getAnonAccount() {
     const keyStore = new nearApi.keyStores.InMemoryKeyStore();
     const near = await nearApi.connect({
@@ -67,7 +68,8 @@ export async function getAnonAccount() {
         deps: { keyStore },
         nodeUrl: config.nodeUrl,
         walletUrl: config.walletUrl,
-        helperUrl: config.helperUrl
+        helperUrl: config.helperUrl,
+        headers: {}
     });
 
     return await near.account("");

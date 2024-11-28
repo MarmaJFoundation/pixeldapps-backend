@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>Cryptoheroes Dapp</title>
-  <link rel="shortcut icon" href="TemplateData/favicon.ico">
-  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="shortcut icon" href="cryptoheroes/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="cryptoheroes/TemplateData/style.css">
 </head>
 <body>
+  <!-- <div id="unity-mobile-warning">
+    Cryptoheroes is not supported on mobile devices yet.
+  </div> -->
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
     <!-- width="1224" height="765"-->
@@ -44,7 +46,7 @@
     var loadingBar = document.querySelector("#unity-loading-bar");
     var progressBarFull = document.querySelector("#unity-progress-bar-full");
     var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-    // var mobileWarning = document.querySelector("#unity-mobile-warning");
+    var mobileWarning = document.querySelector("#unity-mobile-warning");
     var abort = false;
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -52,6 +54,24 @@
     // happening inside the engine, and you would instead like to size up
     // the canvas DOM size and WebGL render target sizes yourself.
     // config.matchWebGLToCanvasSize = false;
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      container.className = "unity-mobile";
+      // Avoid draining fillrate performance on mobile devices,
+      // and default/override low DPI mode on mobile browsers.
+      config.devicePixelRatio = 1;
+      container.style.display = "none";
+      mobileWarning.style.display = "block";
+      abort = true;
+      setTimeout(() => {
+        //mobileWarning.style.display = "none";
+      }, 5000);
+
+    } else {
+      //canvas.style.width = "1224px";
+      //canvas.style.height = "765px";
+    }
+    loadingBar.style.display = "block";
 
     var script = document.createElement("script");
     script.src = loaderUrl;

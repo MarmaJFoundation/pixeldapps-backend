@@ -22,6 +22,6 @@ export default async (
     }
     catch (err) {
         await logCryptoHeroErrorDb(err, rq.account_id, "get-room-info");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }

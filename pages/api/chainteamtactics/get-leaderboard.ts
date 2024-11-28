@@ -36,6 +36,6 @@ export default async (
     }
     catch (err) {
         await logChainTeamTacticsErrorDb(err, rq.account_id, "get-leaderboard");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }

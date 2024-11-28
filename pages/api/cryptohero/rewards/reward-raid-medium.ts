@@ -43,6 +43,6 @@ export default async (req, res) => {
     }
     catch (err) {
         await logPixelPetsErrorDb(err, "admin", "reward-raid-medium");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 };

@@ -79,7 +79,7 @@ export default async (
     }
     catch (err) {
         await logChainTeamTacticsErrorDb(err, rq.account_id, "join-room");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
     finally {
         if (lockTaken) {

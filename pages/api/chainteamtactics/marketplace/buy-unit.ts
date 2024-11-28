@@ -33,7 +33,7 @@ export default async (
             "ctt_buy_unit",
             { token_id: rq.unitdata.token_id, owner: unit_token.owner, buyer: rq.account_id, price: entry.price },
             new BN('1'),
-            "https://pd.marmaj.org/callback?page=unit_bought",
+            "https://pd-testnet.marmaj.org/callback?page=unit_bought",
             new BN('150000000000000')// 150???
         );
 
@@ -47,6 +47,6 @@ export default async (
     }
     catch (err) {
         await logChainTeamTacticsErrorDb(err, rq.account_id, "buy-unit");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }

@@ -4,21 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>PixelPets Dapp</title>
-  <link rel="shortcut icon" href="pixelpets/TemplateData/favicon.ico">
-  <link rel="stylesheet" href="pixelpets/TemplateData/style.css">
+  <title>Chain Team Tactics Dapp</title>
+  <link rel="shortcut icon" href="chainteam/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="chainteam/TemplateData/style.css">
 </head>
-
 <body>
- <div id="unity-container" class="unity-mobile">
-    <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
-    <!-- width="1224" height="765"-->
-    <div id="unity-loading-bar">
-      <div id="unity-logo"></div>
-      <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full"></div>
-      </div>
-   </div>
+  <div id="unity-mobile-warning">
+    Chain Team Tactics is not supported on mobile devices yet.
+  </div>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" style="height: 702px; width: 1248px; aspect-ratio: auto 16 / 9;"></canvas>
     <!-- width="1224" height="765"-->
@@ -36,16 +29,16 @@
     </div>
   </div>
   <script>
-    var buildUrl = "https://nyc3.digitaloceanspaces.com/pd-marmaj/pp/testnet";
-    var loaderUrl = buildUrl + "/PPBuild.loader.js";
+    var buildUrl = "https://nyc3.digitaloceanspaces.com/pd-marmaj/ctt/mainnet";
+    var loaderUrl = buildUrl + "/CTTBuild.loader.js";
     var config = {
-      dataUrl: buildUrl + "/PPBuild.data.unityweb",
-      frameworkUrl: buildUrl + "/PPBuild.framework.js.unityweb",
-      codeUrl: buildUrl + "/PPBuild.wasm.unityweb",
+      dataUrl: buildUrl + "/CTTBuild.data.unityweb",
+      frameworkUrl: buildUrl + "/CTTBuild.framework.js.unityweb",
+      codeUrl: buildUrl + "/CTTBuild.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "PixelDapps",
-      productName: "PixelPets",
-      productVersion: "1.0",
+      productName: "Chain Team Tactics",
+      productVersion: "0.1",
     };
 
     var container = document.querySelector("#unity-container");

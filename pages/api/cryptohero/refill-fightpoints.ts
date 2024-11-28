@@ -25,7 +25,7 @@ export default async (
             "ch_refill_fight_balance",
             {},
             new BN('200000000000000000000000'),
-            "https://pd.marmaj.org/callback?page=refill_ch",
+            "https://pd-testnet.marmaj.org/callback?page=refill_ch",
             new BN('40000000000000')// 40
         );
 
@@ -37,6 +37,6 @@ export default async (
     }
     catch (err) {
         await logCryptoHeroErrorDb(err, rq.account_id, "refill-fightpoints");
-        res.status(200).json({ success: false, error: "Contact discord support" });
+        res.status(200).json({ success: false, error: "Contact Telegram support" });
     }
 }
